@@ -1,0 +1,11 @@
+#main {
+    width: 100%;
+}
+
+#main #imgFondo .imgFondo {
+    width: 100%;
+    height: 240px;
+    margin-left: 0px;
+    margin-right: auto;
+    border-style: unset;
+}

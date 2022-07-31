@@ -1,0 +1,11 @@
+<div class="row">
+    <h1 id="title">Educación</h1>
+    <div class="col-lg-12 container">
+        <ul>
+            <li *ngFor="let estudio of estudios">
+                <h1>{{estudio.course}}</h1>
+                <p>Cursado en {{estudio.place}}. Tipo: {{estudio.kindStudy}}. Estado: {{estudio.stateStudy}}</p>
+            </li>
+        </ul>
+    </div>
+</div>

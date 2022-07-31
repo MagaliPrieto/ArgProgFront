@@ -1,0 +1,11 @@
+.row{
+    width: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+footer{
+    color: #171f13;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}

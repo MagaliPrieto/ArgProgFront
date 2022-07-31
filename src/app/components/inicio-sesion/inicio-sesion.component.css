@@ -1,0 +1,10 @@
+.gradient-custom {
+    background: #257725;
+    background: -webkit-linear-gradient(to right, #257725, rgb(183, 255, 189));
+    background: linear-gradient(to right, #257725, rgb(183, 255, 189))
+}
+
+.card {
+    background-color: #171f13;
+    box-shadow: 2px 2px 10px rgb(10, 8, 8)
+}

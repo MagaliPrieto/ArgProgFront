@@ -1,0 +1,18 @@
+<div class="row">
+    <h1 id="title">Proyectos realizados</h1>
+    <div class="container">
+        <ul>
+            <li *ngFor="let proyecto of proyectos">
+                <div class="col-sm-12 col-md-7 col-lg-7 texto">
+                    <h1>{{proyecto.name}}</h1>
+                    <p>
+                        {{proyecto.year}} {{proyecto.description}}
+                    </p>
+                </div>
+                <div class="col-sm-12 col-md-5 col-lg-5 foto">
+                    <img src={{proyecto.picUrl}} class="img-fluid justify content center img-1" alt="JAVA">
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

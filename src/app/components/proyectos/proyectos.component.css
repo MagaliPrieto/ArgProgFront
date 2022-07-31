@@ -1,0 +1,79 @@
+.row {
+    padding: 20px;
+    background-color: #171f13;
+    color: whitesmoke;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#title {
+    margin-top: -13px;
+    font-weight: bold;
+    color: #257725;
+    box-shadow: 2px 2px 10px rgb(10, 8, 8);
+    text-shadow: 3px 3px 5px rgb(10, 8, 8);
+    border-radius: 5px;
+}
+
+.container {
+    margin-top: 1%;
+    box-shadow: 2px 2px 10px rgb(10, 8, 8);
+    width: auto;
+    border-radius: 5px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+    text-align: justify;
+}
+
+.texto h1 {
+    text-shadow: 3px 3px 5px rgb(10, 8, 8);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 35px;
+}
+
+.texto p {
+    text-align: left;
+    padding-right: 2%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.texto,
+.foto {
+    display: inline-block;
+    text-align: justify;
+    vertical-align: middle;
+    margin-top: 1%;
+}
+
+.texto2,
+.foto2 {
+    display: inline-block;
+    text-align: justify;
+    vertical-align: middle;
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+.texto,
+.texto2 {
+    text-align: left;
+    padding-right: 2%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.foto {
+    position: relative;
+    text-align: center;
+    box-shadow: 3px 3px 10px rgb(10, 8, 8);
+}
+
+.img-1,
+.img-2 {
+    box-shadow: 3px 3px 10px rgb(10, 8, 8);
+    border-radius: 7px;
+}
