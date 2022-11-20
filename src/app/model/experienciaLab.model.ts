@@ -1,5 +1,5 @@
 export interface ExperienciaLab {
-     id: number;
+     id?: number;
      company: string;
      startDate: string;
      endDate: string;

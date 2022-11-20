@@ -1,5 +1,5 @@
 export interface Proyecto {
-    id: number;
+    id?: number;
     name: string;
     description: string;
     year: string;

@@ -13,4 +13,12 @@ export class SkillService {
   public getSkills(): Observable<Skill[]> {
     return this.http.get<Skill[]>(buildBackendUrl('/skills'));
   }
+
+  public createSkill(skill: Skill): Observable<string> {
+    return this.http.post(buildBackendUrl('/skills/1'), skill, { responseType: 'text' });
+  }
+
+  public deleteSkill(skillId: number): Observable<any> {
+    return this.http.delete(buildBackendUrl('/skills/' + skillId));
+  }
 }

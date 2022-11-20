@@ -1,5 +1,5 @@
 export interface Estudio {
-    id: number;
+    id?: number;
     place: string;
     course: string;
     kindStudy: string;

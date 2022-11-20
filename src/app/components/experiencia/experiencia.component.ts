@@ -17,4 +17,16 @@ export class ExperienciaComponent implements OnInit {
     console.log(this.experienciasLab);
   }
 
+  delete(id?: number): void {
+    console.log(id);
+    if (!!id && this.experienciasLab?.find(e => e.id === id)) {
+      this.experienciaLabService.deleteExperiencia(id).subscribe({
+        next: (res) => {
+          console.log(res);
+          this.experienciaLabService.getExperiencias().subscribe(data=>{this.experienciasLab=data});
+        },
+        error: (e) => console.error(e)
+      });
+    }
+  }
 }

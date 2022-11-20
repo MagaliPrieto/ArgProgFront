@@ -5,6 +5,7 @@
             <li *ngFor="let estudio of estudios">
                 <h1>{{estudio.course}}</h1>
                 <p>Cursado en {{estudio.place}}. Tipo: {{estudio.kindStudy}}. Estado: {{estudio.stateStudy}}</p>
+                <button class="btn btn-success" (click)="delete(estudio.id)">Eliminar</button>
             </li>
         </ul>
     </div>

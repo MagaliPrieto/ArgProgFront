@@ -19,4 +19,20 @@ export class SkillsComponent implements OnInit {
       this.softSkills = data.filter(s => s.kindSkill === 'SOFT');
     });
   }
+
+  delete(id?: number): void {
+    console.log(id);
+    if (!!id && (this.hardSkills?.find(e => e.id === id) || this.softSkills?.find(e => e.id === id))) {
+      this.service.deleteSkill(id).subscribe({
+        next: (res) => {
+          console.log(res);
+          this.service.getSkills().subscribe(data => {
+            this.hardSkills = data.filter(s => s.kindSkill === 'HARD');
+            this.softSkills = data.filter(s => s.kindSkill === 'SOFT');
+          });
+        },
+        error: (e) => console.error(e)
+      });
+    }
+  }
 }

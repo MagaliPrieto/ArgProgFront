@@ -13,4 +13,12 @@ export class EstudioService {
   public getEstudios(): Observable<Estudio[]> {
     return this.http.get<Estudio[]>(buildBackendUrl('/studies'));
   }
+
+  public createEstudio(value: Estudio): Observable<string> {
+    return this.http.post(buildBackendUrl('/studies/1'), value, { responseType: 'text'});
+  }
+
+  public deleteEstudio(estId: number): Observable<any> {
+    return this.http.delete(buildBackendUrl('/studies/' + estId));
+  }
 }

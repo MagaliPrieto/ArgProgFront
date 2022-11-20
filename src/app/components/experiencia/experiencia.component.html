@@ -6,6 +6,7 @@
                 <h1>{{exp.company}} </h1>
                 <h3> Período: {{exp.startDate}} - {{exp.endDate}}</h3>
                 <p>Posición: {{exp.description}}</p>
+                <button class="btn btn-success" (click)="delete(exp.id)">Eliminar</button>
             </li>
         </ul>
     </div>

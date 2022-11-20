@@ -13,4 +13,12 @@ export class ExperienciaLabService {
   public getExperiencias(): Observable<ExperienciaLab[]> {
     return this.http.get<ExperienciaLab[]>(buildBackendUrl('/experiences'));
   }
+
+  public createExperiencia(exp: ExperienciaLab): Observable<string> {
+    return this.http.post(buildBackendUrl('/experiences/1'), exp, { responseType: 'text' });
+  }
+
+  public deleteExperiencia(expId: number): Observable<any> {
+    return this.http.delete(buildBackendUrl('/experiences/' + expId));
+  }
 }
