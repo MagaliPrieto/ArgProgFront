@@ -1,0 +1,57 @@
+<div>
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="company">Empresa</label>
+          <input
+            type="text"
+            class="form-control"
+            id="company"
+            required
+            [(ngModel)]="experienciaLab.company"
+            name="company"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="description">Descripción</label>
+          <input
+            class="form-control"
+            id="description"
+            required
+            [(ngModel)]="experienciaLab.description"
+            name="description"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="startDate">Fecha de inicio</label>
+          <input
+            class="form-control"
+            id="startDate"
+            required
+            [(ngModel)]="experienciaLab.startDate"
+            name="startDate"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="endDate">Fecha de finalización</label>
+          <input
+            class="form-control"
+            id="endDate"
+            required
+            [(ngModel)]="experienciaLab.endDate"
+            name="endDate"
+          />
+        </div>
+  
+        <button (click)="save()" class="btn btn-success">Guardar</button>
+      </div>
+  
+      <div *ngIf="submitted">
+        <h4>La experiencia se ha cargado!</h4>
+        <a routerLink="portfolio" class="nav-link">Volver</a>
+      </div>
+    </div>
+  </div>

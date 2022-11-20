@@ -13,6 +13,7 @@ import { AppRountingModule } from './app-rounting.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
+import { ExperienciaAddComponent } from './components/experiencia-add/experiencia-add.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
@@ -33,6 +34,7 @@ import { AuthInterceptor } from './auth-interceptor';
     InicioSesionComponent,
     PortfolioComponent,
     ExperienciaComponent,
+    ExperienciaAddComponent,
     EducacionComponent,
     SkillsComponent,
     ProyectosComponent,
