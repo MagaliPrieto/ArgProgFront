@@ -15,7 +15,7 @@ export class ExperienciaAddComponent implements OnInit {
     description: '',
     endDate: '',
     startDate: '',
-    userId: 0
+    userId: 1
   };
   submitted: boolean = false;
 

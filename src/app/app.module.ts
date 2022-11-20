@@ -21,6 +21,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AuthInterceptor } from './auth-interceptor';
+import { EducacionAddComponent } from './components/educacion-add/educacion-add.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { AuthInterceptor } from './auth-interceptor';
     ExperienciaComponent,
     ExperienciaAddComponent,
     EducacionComponent,
+    EducacionAddComponent,
     SkillsComponent,
     ProyectosComponent,
     FooterComponent
