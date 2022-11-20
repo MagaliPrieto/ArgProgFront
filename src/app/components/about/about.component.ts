@@ -12,7 +12,7 @@ export class AboutComponent implements OnInit {
 
   constructor() {
     this.summary = 'MAGALI JIMENA PRIETO';
-    this.details = 'Pequeña introduccion de los datos de Maga';
+    this.details = 'Soy estudiante de la carrera de Ingenieria Industrial buscando complementar mi formación con conocimientos de IT, sin conocimientos previos al programa Argentina Programa.';
     this.photoUrl = '/../../assets/img/profile_picture.jpg';
   }
 
