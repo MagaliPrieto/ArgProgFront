@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ExperienciaLab } from 'src/app/model/experienciaLab.model';
 import { ExperienciaLabService } from 'src/app/services/experiencia-lab.service';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-experiencia',
@@ -11,10 +12,12 @@ import { ExperienciaLabService } from 'src/app/services/experiencia-lab.service'
 export class ExperienciaComponent implements OnInit {
 
   experienciasLab?: ExperienciaLab[];
-  constructor(private experienciaLabService:ExperienciaLabService, private router: Router) { }//inyección del servicio en el constructor
+  esEditable: boolean = false;
+  constructor(private experienciaLabService:ExperienciaLabService, private router: Router, private tokenService: TokenService) { }//inyección del servicio en el constructor
 
   ngOnInit(): void {
     this.experienciaLabService.getExperiencias().subscribe(data=>{this.experienciasLab=data});
+    this.esEditable = this.tokenService.hasAuth();
     console.log(this.experienciasLab);
   }
 

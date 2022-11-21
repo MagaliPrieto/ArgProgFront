@@ -49,4 +49,8 @@ export class TokenService {
   public logOut(): void {
     window.sessionStorage.clear();
   }
+
+  public hasAuth(): boolean {
+    return !!this.getUserName();
+  }
 }

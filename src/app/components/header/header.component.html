@@ -8,7 +8,8 @@
                 <app-rrss></app-rrss>
             </li>
             <li>
-                <button class="login" (click)="onLogin()">Login</button>
+                <button *ngIf="!tieneAuth" class="login" (click)="onLogin()">Login</button>
+                <button *ngIf="tieneAuth" class="login" (click)="onLogout()">Logout</button>
             </li>
         </ul>
     </div>

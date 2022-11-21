@@ -1,13 +1,13 @@
 <div class="row">
     <h1 id="title">Experiencia laboral</h1>
-    <button class="btn btn-success" (click)="create()">Nuevo</button>
+    <button *ngIf="esEditable" class="btn btn-success" (click)="create()">Nuevo</button>
     <div class="col-lg-12 container">
         <ul>
             <li *ngFor="let exp of experienciasLab">
                 <h1>{{exp.company}} </h1>
                 <h3> Período: {{exp.startDate}} - {{exp.endDate}}</h3>
                 <p>Posición: {{exp.description}}</p>
-                <button class="btn btn-danger" (click)="delete(exp.id)">Eliminar</button>
+                <button *ngIf="esEditable" class="btn btn-danger" (click)="delete(exp.id)">Eliminar</button>
             </li>
         </ul>
     </div>

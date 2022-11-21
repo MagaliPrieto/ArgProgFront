@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-header',
@@ -8,13 +9,20 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  tieneAuth: boolean = false;
+  constructor(private router: Router, private tokenService: TokenService) { }
 
   ngOnInit(): void {
+    this.tieneAuth = this.tokenService.hasAuth();
   }
 
   onLogin() {
     this.router.navigate(['/login']);
+  }
+
+  onLogout() {
+    this.tokenService.logOut();
+    window.location.reload();
   }
 
 }

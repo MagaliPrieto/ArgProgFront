@@ -2,12 +2,12 @@
     <h1 id="hard">HARD SKILLS</h1>
     <div class="text centercol-sm-3 col-md-3 col-lg-3" *ngFor="let skill of hardSkills">
         <circle-progress [percent]=skill.level [title]=skill.name></circle-progress>
-        <button class="btn btn-outline-danger" (click)="delete(skill.id)">Eliminar</button>
+        <button *ngIf="esEditable" class="btn btn-outline-danger" (click)="delete(skill.id)">Eliminar</button>
     </div>
     <h1 id="soft">SOFT SKILLS</h1>
     <div class="text centercol-sm-3 col-md-3 col-lg-3" *ngFor="let skill of softSkills">
         <circle-progress [percent]=skill.level [title]=skill.name></circle-progress>
-        <button class="btn btn-outline-danger" (click)="delete(skill.id)">Eliminar</button>
+        <button *ngIf="esEditable" class="btn btn-outline-danger" (click)="delete(skill.id)">Eliminar</button>
     </div>
-    <button class="btn btn-success" (click)="create()">Nuevo</button>
+    <button *ngIf="esEditable" class="btn btn-success" (click)="create()">Nuevo</button>
 </div>

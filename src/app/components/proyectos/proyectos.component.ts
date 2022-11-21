@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Proyecto } from 'src/app/model/proyecto.model';
 import { ProyectosService } from 'src/app/services/proyectos.service';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-proyectos',
@@ -10,12 +11,14 @@ import { ProyectosService } from 'src/app/services/proyectos.service';
 })
 export class ProyectosComponent implements OnInit {
   proyectos?: Proyecto[];
+  esEditable: boolean = false;
 
 
-  constructor(private proyectosService: ProyectosService, private router: Router) { }
+  constructor(private proyectosService: ProyectosService, private router: Router, private tokenService: TokenService) { }
 
   ngOnInit(): void {
     this.proyectosService.getProyectos().subscribe(data => { this.proyectos = data });
+    this.esEditable = this.tokenService.hasAuth();
     console.log(this.proyectos);
   }
   
