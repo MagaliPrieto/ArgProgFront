@@ -22,6 +22,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AuthInterceptor } from './auth-interceptor';
 import { EducacionAddComponent } from './components/educacion-add/educacion-add.component';
+import { ProyectosAddComponent } from './components/proyectos-add/proyectos-add.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { EducacionAddComponent } from './components/educacion-add/educacion-add.
     EducacionAddComponent,
     SkillsComponent,
     ProyectosComponent,
+    ProyectosAddComponent,
     FooterComponent
   ],
   imports: [

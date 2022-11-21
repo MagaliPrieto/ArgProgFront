@@ -1,0 +1,60 @@
+<div>
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="description">Descripción</label>
+          <input
+            type="text"
+            class="form-control"
+            id="description"
+            required
+            [(ngModel)]="proyecto.description"
+            name="description"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            required
+            [(ngModel)]="proyecto.name"
+            name="name"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="picUrl">URL de imagen</label>
+          <input
+            type="text"
+            class="form-control"
+            id="picUrl"
+            required
+            [(ngModel)]="proyecto.picUrl"
+            name="picUrl"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="year">Año</label>
+          <input
+            type="text"
+            class="form-control"
+            id="year"
+            required
+            [(ngModel)]="proyecto.year"
+            name="year"
+          />
+        </div>
+  
+        <button (click)="save()" class="btn btn-success">Guardar</button>
+      </div>
+  
+      <div *ngIf="submitted">
+        <h4>El proyecto se ha cargado!</h4>
+        <a routerLink="portfolio" class="nav-link">Volver</a>
+      </div>
+    </div>
+  </div>
