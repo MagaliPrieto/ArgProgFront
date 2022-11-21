@@ -6,11 +6,13 @@ import { InicioSesionComponent } from './components/inicio-sesion/inicio-sesion.
 import { ExperienciaAddComponent } from './components/experiencia-add/experiencia-add.component';
 import { EducacionAddComponent } from './components/educacion-add/educacion-add.component';
 import { ProyectosAddComponent } from './components/proyectos-add/proyectos-add.component';
+import { SkillsAddComponent } from './components/skills-add/skills-add.component';
 
 const routes: Routes = [
   { path: 'experiencias/add', component: ExperienciaAddComponent },
   { path: 'estudios/add', component: EducacionAddComponent },
   { path: 'proyectos/add', component: ProyectosAddComponent },
+  { path: 'skills/add', component: SkillsAddComponent },
   { path: 'portfolio', component: PortfolioComponent },
   { path: 'login', component: InicioSesionComponent },
   { path: '', redirectTo: 'portfolio', pathMatch: 'full' }

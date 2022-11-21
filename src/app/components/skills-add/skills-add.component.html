@@ -1,0 +1,48 @@
+<div>
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="kindSkill">Tipo de skill</label>
+          <input
+            type="text"
+            class="form-control"
+            id="kindSkill"
+            required
+            [(ngModel)]="skill.kindSkill"
+            name="kindSkill"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            required
+            [(ngModel)]="skill.name"
+            name="name"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="level">Nivel</label>
+          <input
+            type="text"
+            class="form-control"
+            id="level"
+            required
+            [(ngModel)]="skill.level"
+            name="level"
+          />
+        </div>
+  
+        <button (click)="save()" class="btn btn-success">Guardar</button>
+      </div>
+  
+      <div *ngIf="submitted">
+        <h4>La skill se ha cargado!</h4>
+        <a routerLink="portfolio" class="nav-link">Volver</a>
+      </div>
+    </div>
+  </div>

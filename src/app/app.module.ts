@@ -23,6 +23,7 @@ import { FormsModule } from '@angular/forms';
 import { AuthInterceptor } from './auth-interceptor';
 import { EducacionAddComponent } from './components/educacion-add/educacion-add.component';
 import { ProyectosAddComponent } from './components/proyectos-add/proyectos-add.component';
+import { SkillsAddComponent } from './components/skills-add/skills-add.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { ProyectosAddComponent } from './components/proyectos-add/proyectos-add.
     EducacionComponent,
     EducacionAddComponent,
     SkillsComponent,
+    SkillsAddComponent,
     ProyectosComponent,
     ProyectosAddComponent,
     FooterComponent
