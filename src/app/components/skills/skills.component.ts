@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Skill } from 'src/app/model/skill.model';
 import { SkillService } from 'src/app/services/skill.service';
 
@@ -11,7 +12,7 @@ export class SkillsComponent implements OnInit {
   hardSkills?: Skill[];
   softSkills?: Skill[];
 
-  constructor(public service: SkillService) { }
+  constructor(public service: SkillService, private router: Router) { }
 
   ngOnInit(): void {
     this.service.getSkills().subscribe(data => {
@@ -35,4 +36,9 @@ export class SkillsComponent implements OnInit {
       });
     }
   }
+
+  create(): void {
+    this.router.navigateByUrl('skills/add');
+  }
+
 }

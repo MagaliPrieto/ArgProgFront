@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ExperienciaLab } from 'src/app/model/experienciaLab.model';
 import { ExperienciaLabService } from 'src/app/services/experiencia-lab.service';
 
@@ -10,7 +11,7 @@ import { ExperienciaLabService } from 'src/app/services/experiencia-lab.service'
 export class ExperienciaComponent implements OnInit {
 
   experienciasLab?: ExperienciaLab[];
-  constructor(private experienciaLabService:ExperienciaLabService) { }//inyección del servicio en el constructor
+  constructor(private experienciaLabService:ExperienciaLabService, private router: Router) { }//inyección del servicio en el constructor
 
   ngOnInit(): void {
     this.experienciaLabService.getExperiencias().subscribe(data=>{this.experienciasLab=data});
@@ -29,4 +30,9 @@ export class ExperienciaComponent implements OnInit {
       });
     }
   }
+
+  create(): void {
+    this.router.navigateByUrl('experiencias/add');
+  }
+
 }

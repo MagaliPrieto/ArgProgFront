@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Estudio } from 'src/app/model/estudio.model';
 import { EstudioService } from 'src/app/services/estudio.service';
 
@@ -11,7 +12,7 @@ export class EducacionComponent implements OnInit {
   
   estudios?: Estudio[]; 
   
-  constructor(public estudioService: EstudioService) { }
+  constructor(public estudioService: EstudioService, private router: Router) { }
   
   ngOnInit(): void {
     this.estudioService.getEstudios().subscribe(data=>{this.estudios = data});
@@ -29,6 +30,10 @@ export class EducacionComponent implements OnInit {
         error: (e) => console.error(e)
       });
     }
+  }
+
+  create(): void {
+    this.router.navigateByUrl('estudios/add');
   }
 
 }

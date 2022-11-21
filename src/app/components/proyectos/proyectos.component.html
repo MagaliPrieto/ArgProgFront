@@ -1,5 +1,6 @@
 <div class="row">
     <h1 id="title">Proyectos realizados</h1>
+    <button class="btn btn-success" (click)="create()">Nuevo</button>
     <div class="container">
         <ul>
             <li *ngFor="let proyecto of proyectos">
@@ -12,7 +13,7 @@
                 <div class="col-sm-12 col-md-5 col-lg-5 foto">
                     <img src={{proyecto.picUrl}} class="img-fluid justify content center img-1" alt="JAVA">
                 </div>
-                <button class="btn btn-success" (click)="delete(proyecto.id)">Eliminar</button>
+                <button class="btn btn-danger" (click)="delete(proyecto.id)">Eliminar</button>
             </li>
         </ul>
     </div>
